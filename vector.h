@@ -444,3 +444,5 @@ void Vector<T>::EmplaceReallocate(size_t index, Args&&... args) {
     data_.Swap(new_data);
     ++size_;
 }
+
+/// Изменения
