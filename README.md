@@ -1,1 +1,1 @@
-# git_subtree
+# Git subtree example
