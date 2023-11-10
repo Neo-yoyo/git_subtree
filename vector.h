@@ -11,9 +11,9 @@ class RawMemory {
 public:
     RawMemory() = default;
 
-    explicit RawMemory(size_t capacity)
-            : buffer_(Allocate(capacity))
-            , capacity_(capacity) {
+    explicit RawMemory(size_t capacity):
+        buffer_(Allocate(capacity)),
+        capacity_(capacity) {
     }
 
     RawMemory(const RawMemory&) = delete;
@@ -177,10 +177,9 @@ Vector<T>::Vector(size_t size)
 }
 
 template<typename T>
-Vector<T>::Vector(const Vector& other)
-        : data_(other.size_)
-        , size_(other.size_)  //
-{
+Vector<T>::Vector(const Vector& other):
+    data_(other.size_),
+    size_(other.size_) {
     std::uninitialized_copy_n(other.data_.GetAddress(), other.size_, data_.GetAddress());
 }
 
